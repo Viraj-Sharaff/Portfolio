@@ -1,20 +1,20 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import image from "./download.jpg";
-import "./landing.scss";
 import { SocialIcon } from 'react-social-icons'
+import "./about.scss";
 
 
-export default function Landng() {
+export default function About() {
   return (
     <div className="landing">
       <div className="social">
         <SocialIcon className="icon" url="https://www.facebook.com/viraj.kumar.9634" />
-        <SocialIcon className = "icon "url="https://twitter.com/VirajKumar1025" />
-        <SocialIcon className = "icon" url="https://www.linkedin.com/in/viraj-kumar-78b57a193/" />
-        <SocialIcon className  = "icon" url ="https://www.instagram.com/viraj_kumar1" />
-        <SocialIcon className = "icon" url ="https://github.com/wharf667" />
-       
+        <SocialIcon className="icon " url="https://twitter.com/VirajKumar1025" />
+        <SocialIcon className="icon" url="https://www.linkedin.com/in/viraj-kumar-78b57a193/" />
+        <SocialIcon className="icon" url="https://www.instagram.com/viraj_kumar1" />
+        <SocialIcon className="icon" url="https://github.com/wharf667" />
+
 
 
       </div>
