@@ -1,40 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Landng from './components/landing/Landng';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import About from './components/about/About';
 import Nav from './components/nav/Nav';
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Landng />,
-  },
-  {
-    path: "/skills",
-    element: <h1>Skills</h1>,
-  },
-  {
-    path: "/projects",
-    element: <h1>Projects</h1>,
-  },
-  {
-    path: "/contact",
-    element: <h1>Contact</h1>,
-  },
-]);
+import './index.css';
 
 const AppNavigation = () => (
-  <>
+  <Router>
     <Nav />
-    <RouterProvider router={router} />
-  </>
+    <Routes>
+      <Route path="/" element={<About />} />
+      <Route path="/skills" element={<h1>Skills</h1>} />
+      <Route path="/projects" element={<h1>Projects</h1>} />
+      <Route path="/contact" element={<h1>Contact</h1>} />
+    </Routes>
+  </Router>
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -44,7 +26,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
